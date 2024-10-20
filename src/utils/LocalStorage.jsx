@@ -1,7 +1,7 @@
 
 
 const admin = {
-  id: 1,
+  id: 0,
   email: "admin@company.com",
   name: "Manjeet",
   password: "123",
@@ -13,14 +13,14 @@ const admin = {
 
 const employees = [
   {
-    id: "2",
+    id: "1",
     email: "employee1@company.com",
     password: "123",
     name: "Vishnu",
-    newTask: 2,
-    acceptTasks: 4,
-    completedTasks: 3,
-    failedTasks: 1,
+    newTask: 1,
+    acceptTasks: 0,
+    completedTasks: 1,
+    failedTasks: 0,
     task: [
       {
         description: "Create wireframes for the landing page.",
@@ -45,14 +45,14 @@ const employees = [
     ],
   },
   {
-    id: "3",
+    id: "2",
     email: "employee2@company.com",
     password: "123",
     name: "Rahul",
-    newTask: 1,
-    acceptTasks: 3,
-    completedTasks: 2,
-    failedTasks: 1,
+    newTask: 0,
+    acceptTasks: 1,
+    completedTasks: 0,
+    failedTasks: 0,
     task: [
       {
         description: "Integrate third-party API for user authentication.",
@@ -60,26 +60,26 @@ const employees = [
         active: true,
         failed: false,
         complete: false,
-        new: true,
+        new: false,
         date: "2024-10-22",
         category: "Development",
       },
     ],
   },
   {
-    id: "4",
+    id: "3",
     email: "employee3@company.com",
     password: "123",
     name: "Pratham",
-    newTask: 1,
-    acceptTasks: 3,
-    completedTasks: 3,
+    newTask: 0,
+    acceptTasks: 1,
+    completedTasks: 0,
     failedTasks: 0,
     task: [
       {
         description: "Fix registration form bug affecting user sign-ups.",
         title: "Fix Registration Bug",
-        active: true,
+        active: false,
         failed: false,
         complete: true,
         new: false,
@@ -89,20 +89,20 @@ const employees = [
     ],
   },
   {
-    id: "5",
+    id: "4",
     email: "employee4@company.com",
     password: "123",
     name: "Alok",
-    newTask: 2,
-    acceptTasks: 4,
-    completedTasks: 2,
-    failedTasks: 1,
+    newTask: 0,
+    acceptTasks: 1,
+    completedTasks: 0,
+    failedTasks: 0,
     task: [
       {
         description: "Optimize database queries for faster loading times.",
         title: "Optimize Queries",
         active: true,
-        failed: true,
+        failed: false,
         complete: false,
         new: false,
         date: "2024-10-20",
@@ -111,19 +111,19 @@ const employees = [
     ],
   },
   {
-    id: "6",
+    id: "5",
     email: "employee5@company.com",
     password: "123",
     name: "Mukesh",
-    newTask: 1,
-    acceptTasks: 3,
-    completedTasks: 3,
+    newTask: 0,
+    acceptTasks: 0,
+    completedTasks: 1,
     failedTasks: 0,
     task: [
       {
         description: "Design promotional materials for the product launch.",
         title: "Design Marketing Materials",
-        active: true,
+        active: false,
         failed: false,
         complete: true,
         new: false,

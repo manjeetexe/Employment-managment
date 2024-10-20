@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CreateTask = () => {
+const CreateTask = ({ addTask }) => {
   const [task, setTask] = useState({
     description: '',
     title: '',
@@ -24,31 +24,18 @@ const CreateTask = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Check for the employee in local storage
-    const data = JSON.parse(localStorage.getItem('employees')) || []; // Ensure we have an array
-    const assignedEmployee = data.find((elm) => elm.name === task.assignTo);
-    
-    if (assignedEmployee) {
-      // Push the new task object into the existing tasks array of the assigned employee
-      assignedEmployee.task.push({
-        description: task.description,
-        title: task.title,
-        active: task.active,
-        failed: task.failed,
-        complete: task.complete,
-        new: task.new,
-        date: task.date,
-        category: task.category,
-      });
-      
-      // Update the employees array in local storage
-      const updatedData = data.map((elm) => 
-        elm.name === assignedEmployee.name ? assignedEmployee : elm
-      );
-      localStorage.setItem('employees', JSON.stringify(updatedData));
-    } else {
-      console.log('Employee not found');
-    }
+    // Call the addTask function passed as prop
+    addTask({
+      description: task.description,
+      title: task.title,
+      active: task.active,
+      failed: task.failed,
+      complete: task.complete,
+      new: task.new,
+      date: task.date,
+      category: task.category,
+      assignTo: task.assignTo,
+    });
 
     // Reset the task input fields
     setTask({
